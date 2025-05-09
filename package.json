@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/pengVc/learning-by-doing/issues"
   },
-  "homepage": "https://github.com/pengVc/learning-by-doing#readme"
+  "homepage": "https://github.com/pengVc/learning-by-doing#readme",
+  "workspaces": [
+    "packages/webpack-adv"
+  ],
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
 }
