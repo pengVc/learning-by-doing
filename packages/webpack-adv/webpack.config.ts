@@ -1,6 +1,6 @@
 import type { Configuration } from 'webpack'
+import HooksLifecyclePlugin from '@lbd/webpack-adv/plugins/hooks-lifecycle-plugin'
 
-import MyPlugin from './plugins/my-first-plugin'
 
 const config: Configuration = {
   entry: './src/index.js',
@@ -8,7 +8,7 @@ const config: Configuration = {
     path: __dirname + '/dist',
     filename: 'ts-[name].[chunkhash].js',
   },
-  plugins: [new MyPlugin()],
+  plugins: [new HooksLifecyclePlugin()],
 }
 
 export default config

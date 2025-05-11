@@ -3,12 +3,16 @@ const logger = {
     console.log(...args)
   },
   start: (title: string, ...args: any[]) => {
-    console.log('\n', '/* --- Start: ', title, ' --- */', '\n')
-    console.log(...args)
+    logger.msg('\n', '/* --- Start: ', title, ' --- */', '\n')
+    logger.msg(...args)
   },
   end: (end: string, ...args: any[]) => {
-    console.log(...args)
-    console.log('\n', '/* --- End: ', end, ' --- */', '\n')
+    logger.msg('\n', '/* --- End: ', end, ' --- */', '\n')
+    logger.msg(...args)
+  },
+  log: (title: string, ...args: any[]) => {
+    logger.msg('\n', '/* --- ', title, ' --- */', '\n')
+    logger.msg(...args)
   },
 }
 
