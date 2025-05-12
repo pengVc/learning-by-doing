@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "build-ts-esm": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' NODE_OPTIONS='--loader ts-node/esm' webpack --config webpack.config.ts"
+    "build-ts-esm": "NODE_OPTIONS='--no-warnings=ExperimentalWarning --loader ts-node/esm' webpack --config webpack.config.ts"
   },
   "keywords": [],
   "author": "",
