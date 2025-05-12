@@ -123,6 +123,20 @@ class HooksLifecyclePlugin implements WebpackPluginInstance {
       callback()
     })
 
+    compiler.hooks.emit.tapAsync('HooksLifecyclePlugin', (compilation, callback) => {
+      // 资源生成完成，但尚未写入文件系统（异步）
+      // 可修改最终资源内容
+      logger.log('资源生成完成 (emit)')
+      callback()
+    })
+
+    compiler.hooks.afterEmit.tapAsync('HooksLifecyclePlugin', (compilation, callback) => {
+      // 资源已写入文件系统（异步）
+      // 可执行文件操作（如复制、删除）
+      logger.log('资源已写入文件系统 (afterEmit)')
+      callback()
+    })
+
     compiler.hooks.done.tap('HooksLifecyclePlugin', (stats) => {
       // 编译完成
       // stats: 包含构建统计信息
@@ -133,6 +147,12 @@ class HooksLifecyclePlugin implements WebpackPluginInstance {
       // 编译失败
       logger.log('编译错误 (failed)', error)
     })
+
+    compiler.hooks.invalid.tap('HooksLifecyclePlugin', (error) => {
+      // 在 Watch 模式下，文件变化导致编译无效时
+      // 适合在 Watch 模式下处理文件变更（如通知开发者））
+      console.error('构建错误:', error);
+    });
   }
 }
 
