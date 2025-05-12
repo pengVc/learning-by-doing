@@ -4,13 +4,18 @@ import HooksLifecyclePlugin from '@lbd/webpack-adv/plugins/hooks-lifecycle-plugi
 import HooksPractisePlugin from '@lbd/webpack-adv/plugins/hooks-practise-plugin'
 
 const config: Configuration = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'ts-[name].[chunkhash].js',
   },
   module: {
     rules: [
+      {
+        test: /\.[t]sx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.[jt]sx?$/,
         use: path.resolve(__dirname, 'loaders/custom-loader.ts'),
