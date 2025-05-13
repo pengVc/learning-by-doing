@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "webpack": "^5.99.8",
     "webpack-cli": "^6.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js",
-    "build-ts-esm": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' NODE_OPTIONS='--loader ts-node/esm' webpack --config webpack.config.ts"
+    "build": "webpack --config webpack.config.ts",
+    "build-ts-esm": "NODE_OPTIONS='--no-warnings=ExperimentalWarning --loader ts-node/esm' webpack --config webpack.config.ts",
+    "build-tsx": "NODE_OPTIONS='--import tsx' webpack --config webpack.config.ts"
   },
   "keywords": [],
   "author": "",
