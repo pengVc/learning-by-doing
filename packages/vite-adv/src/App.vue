@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import customDataPlugin from 'virtual:custom-data'
+
+console.log({
+  customDataPlugin,
+})
 </script>
 
 <template>
