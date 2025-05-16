@@ -3,5 +3,18 @@
   <body>
     <div id="app">eval Page</div>
     <script type="module" src="./main.ts"></script>
+    <script>
+      unStrictMode()
+
+      function unStrictMode() {
+        try {
+          eval('var foo = 1')
+
+          console.log('unStrictMode: ', foo) // => 1
+        } catch (err) {
+          console.log('unStrictMode err: ', err)
+        }
+      }
+    </script>
   </body>
 </html>
