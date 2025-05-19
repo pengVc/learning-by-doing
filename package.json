@@ -20,7 +20,8 @@
   "workspaces": [
     "packages/webpack-adv",
     "packages/vite-adv",
-    "packages/demo"
+    "packages/demo",
+    "packages/ssr-adv"
   ],
   "devDependencies": {
     "prettier": "^3.5.3",
