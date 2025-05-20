@@ -19,7 +19,8 @@
   "homepage": "https://github.com/pengVc/learning-by-doing#readme",
   "workspaces": [
     "packages/webpack-adv",
-    "packages/vite-adv"
+    "packages/vite-adv",
+    "packages/demo"
   ],
   "devDependencies": {
     "prettier": "^3.5.3",
