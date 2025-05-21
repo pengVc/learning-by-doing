@@ -31,6 +31,9 @@ const config: Configuration = {
       dir: path.resolve(__dirname, 'dist'),
     }),
   ],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
 }
 
 export default config

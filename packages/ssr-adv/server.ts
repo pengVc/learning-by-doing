@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url'
 
 import { createServer } from 'vite'
 import sirv from 'sirv'
+import { getErrorMsg } from '@lbd/utils'
 
 import type { SSRender } from './src/main.server.tsx'
 import type { ViteDevServer } from 'vite'
@@ -76,8 +77,3 @@ app.use('*all', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`)
 })
-
-
-const getErrorMsg = (err: any, fallback?: string): string => {
-  return err?.message ?? err?.msg ?? err?.toString() ?? fallback ?? 'Unknown error'
-}
