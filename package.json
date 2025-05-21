@@ -20,10 +20,12 @@
   "workspaces": [
     "packages/webpack-adv",
     "packages/vite-adv",
-    "packages/demo"
+    "packages/demo",
+    "packages/ssr-adv"
   ],
   "devDependencies": {
     "prettier": "^3.5.3",
-    "tsx": "^4.19.4"
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
   }
 }
