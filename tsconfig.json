@@ -3,6 +3,7 @@
   "references": [
     { "path": "./packages/webpack-adv" },
     { "path": "./packages/vite-adv" },
+    { "path": "./packages/demo" },
     { "path": "./packages/ssr-adv" }
   ]
 }

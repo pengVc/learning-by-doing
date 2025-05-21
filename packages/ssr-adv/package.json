@@ -4,24 +4,32 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "dev": "tsx server.ts",
+    "build": "npm run build:server && npm run build:client",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --ssr src/main.server.tsx --outDir dist/server",
+    "preview": "NODE_ENV=production tsx server.ts"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.7",
+    "@types/compression": "^1.7.5",
+    "@types/express": "^5.0.2",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
     "@vitejs/plugin-react": "^4.4.1",
     "tailwindcss": "^4.1.7",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "compression": "^1.8.0",
+    "express": "^5.1.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "sirv": "^3.0.1"
   }
 }
