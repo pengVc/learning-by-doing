@@ -1,20 +1,23 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "rootDir": "./",
     "outDir": "dist",
     "moduleResolution": "bundler",
     "declaration": true,
-    "declarationMap": true,
     "baseUrl": "./",
     "paths": {
       "@lbd/utils": ["../utils/lib/index.ts"],
       "@lbd/utils/*": ["../utils/lib/*"]
     }
   },
-  "include": ["src/**/*.ts", "loaders/**/*", "plugins/**/*"],
+  "include": ["src/**/*.ts"],
   "references": [
     {
       "path": "../utils"
+    },
+    {
+      "path": "./tsconfig.node.json"
     }
   ]
 }
