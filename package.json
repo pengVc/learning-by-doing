@@ -6,7 +6,9 @@
   "scripts": {
     "test": "npm run test --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "clean:node_modules": "find . -type d -name 'node_modules' -exec rm -rf {} +",
+    "clean:dist": "npm run clean:dist --workspaces --if-present"
   },
   "repository": {
     "type": "git",
@@ -20,11 +22,11 @@
   },
   "homepage": "https://github.com/pengVc/learning-by-doing#readme",
   "workspaces": [
+    "packages/utils",
     "packages/webpack-adv",
     "packages/vite-adv",
     "packages/demo",
-    "packages/ssr-adv",
-    "packages/utils"
+    "packages/ssr-adv"
   ],
   "devDependencies": {
     "prettier": "^3.5.3",
