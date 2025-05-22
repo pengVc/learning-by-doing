@@ -1,6 +1,4 @@
 import type { Compiler, WebpackPluginInstance } from 'webpack'
-import * as fs from 'node:fs/promises'
-import * as path from 'node:path'
 
 // 自定义 Webpack 插件类
 class HooksPractisePlugin implements WebpackPluginInstance {
