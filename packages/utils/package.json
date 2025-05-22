@@ -8,7 +8,7 @@
   ],
   "main": "./dist/utils.umd.cjs",
   "module": "./dist/utils.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/utils.d.ts",
   "scripts": {
     "dev": "vite",
     "build": " tsc && vite build",
@@ -16,9 +16,21 @@
     "clean:dist": "rm -rf ./dist"
   },
   "exports": {
-    "types": "./dist/types/index.d.ts",
-    "import": "./dist/utils.js",
-    "require": "./dist/utils.umd.cjs"
+    ".": {
+      "types": "./dist/utils.d.ts",
+      "import": "./dist/utils.js",
+      "require": "./dist/utils.umd.cjs"
+    },
+    "./lib": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./lib/index.ts",
+      "require": "./lib/index.ts"
+    },
+    "./lib/*": {
+      "types": "./dist/lib/*.d.ts",
+      "import": "./lib/*",
+      "require": "./lib/*"
+    }
   },
   "devDependencies": {
     "vite": "^6.3.1",

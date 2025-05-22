@@ -1,5 +1,5 @@
-const getErrorMsg = (err: any): string => {
-  return err?.message ?? err?.msg ?? err?.toString() ?? 'Unknown error'
+const getErrorMsg = (err: any, fallback?: string): string => {
+  return err?.message ?? err?.msg ?? fallback ?? 'Unknown error'
 }
 
 export default getErrorMsg

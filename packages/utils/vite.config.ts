@@ -14,8 +14,8 @@ export default defineConfig({
     {
       ...dts({
         tsconfigPath: './tsconfig.json',
-        outDir: './dist/types',
-        entryRoot: 'lib',
+        outDir: './dist',
+        insertTypesEntry: true,
       }),
       apply: (_, env) => {
         return env.command === 'build'

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url'
 
 import { createServer } from 'vite'
 import sirv from 'sirv'
-import { getErrorMsg } from '@lbd/utils'
+import { getErrorMsg } from '@lbd/utils/lib'
 
 import type { SSRender } from './src/main.server.tsx'
 import type { ViteDevServer } from 'vite'
