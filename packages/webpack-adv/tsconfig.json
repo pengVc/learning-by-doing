@@ -1,15 +1,20 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "composite": true,
     "outDir": "dist",
-    "module": "commonjs",
+    "moduleResolution": "bundler",
     "declaration": true,
-    "declarationMap": true
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
+    "declarationMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@lbd/utils": ["../utils/lib/index.ts"],
+      "@lbd/utils/*": ["../utils/lib/*"]
     }
-  }
+  },
+  "include": ["src/**/*.ts", "loaders/**/*", "plugins/**/*"],
+  "references": [
+    {
+      "path": "../utils"
+    }
+  ]
 }

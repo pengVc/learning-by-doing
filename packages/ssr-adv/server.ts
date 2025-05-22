@@ -6,6 +6,16 @@ import { fileURLToPath } from 'url'
 
 import { createServer } from 'vite'
 import sirv from 'sirv'
+
+/**
+ * 以下的引入方式，需要(需要！！！)先完成 packages/ssr-adv 构建：
+ * npm run preview -w packages/ssr-adv
+ */
+// import { getErrorMsg } from '@lbd/utils'
+
+/**
+ * 以下的引用方式，则不需要完成，但这依赖 @lbd/utils 存在 index.ts 且有导出
+ */
 import { getErrorMsg } from '@lbd/utils/lib'
 
 import type { SSRender } from './src/main.server.tsx'
