@@ -1,7 +1,7 @@
 import { Compiler, WebpackPluginInstance } from 'webpack'
 import * as fs from 'node:fs/promises'
-import getErrorMsg from '../utils/getErrorMsg'
 import path from 'node:path'
+import { getErrorMsg } from '@lbd/utils'
 
 type DeleteDirPluginOptions = {
   dir: string
