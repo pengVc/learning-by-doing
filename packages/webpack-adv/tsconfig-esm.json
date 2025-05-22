@@ -1,15 +1,9 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "composite": true,
     "outDir": "dist",
-    "module": "commonjs",
+    "moduleResolution": "bundler",
     "declaration": true,
     "declarationMap": true
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
   }
 }

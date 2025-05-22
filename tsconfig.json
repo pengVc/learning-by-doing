@@ -1,5 +1,10 @@
 {
-  "extends": "./tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "compilerOptions": {
+    "disableSolutionSearching": true,
+    "disableReferencedProjectLoad": true
+  },
   "references": [
     { "path": "./packages/webpack-adv" },
     { "path": "./packages/vite-adv" },
