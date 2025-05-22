@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.ts",
+    "build": "NODE_OPTIONS='--import tsx' webpack --config webpack.config.ts",
     "build-ts-cjs": "webpack --config webpack.config.ts",
     "build-ts-esm": "NODE_OPTIONS='--no-warnings=ExperimentalWarning --loader ts-node/esm' webpack --config webpack.config.ts",
     "build-tsx": "NODE_OPTIONS='--import tsx' webpack --config webpack.config.ts",

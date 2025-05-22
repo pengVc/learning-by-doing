@@ -1,6 +1,11 @@
 import { Compiler, WebpackPluginInstance } from 'webpack'
 import * as fs from 'node:fs/promises'
 import path from 'node:path'
+
+/**
+ * 因在 tsconfig 针对 packages/utils，配置了 references 以及 baseUrl、path
+ * 以下的引入方式，不再需要(不需要！！！)先完成 packages/ssr-adv 构建
+ */
 import { getErrorMsg } from '@lbd/utils'
 
 type DeleteDirPluginOptions = {
