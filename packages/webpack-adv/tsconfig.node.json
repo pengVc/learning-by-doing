@@ -1,9 +1,9 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.base.node.json",
   "compilerOptions": {
     "rootDir": "../../",
     "moduleResolution": "bundler",
-    "noEmit": true
+    "emitDeclarationOnly": true
   },
   "include": ["loaders/**/*", "plugins/**/*"]
 }
