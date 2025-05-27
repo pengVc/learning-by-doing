@@ -11,6 +11,7 @@ export default defineConfig({
     {
       ...dts({
         tsconfigPath: './tsconfig.app.json',
+        entryRoot: './src',
       }),
       apply: (_, env) => {
         return env.command === 'build' && env.isSsrBuild === true

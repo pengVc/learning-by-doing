@@ -26,7 +26,8 @@
     "packages/webpack-adv",
     "packages/vite-adv",
     "packages/demo",
-    "packages/ssr-adv"
+    "packages/ssr-adv",
+    "packages/shared"
   ],
   "devDependencies": {
     "prettier": "^3.5.3",

@@ -1,7 +1,10 @@
 import { Compiler, WebpackPluginInstance } from 'webpack'
 import * as fs from 'node:fs/promises'
 import path from 'node:path'
+
 import { getErrorMsg } from '@lbd/utils'
+
+console.log(getErrorMsg('', 'delete-dir'))
 
 type DeleteDirPluginOptions = {
   dir: string
@@ -28,6 +31,7 @@ class DeleteDirPlugin implements WebpackPluginInstance {
 
       try {
         await fs.rm(dir, { recursive: true, force: true })
+        console.log('DeleteDirPlugin Complete')
       } catch (error) {
         compilation.errors.push(
           new Error(`[DeleteDirPlugin] Failed to delete directory: ${dir}. ${getErrorMsg(error)}`),

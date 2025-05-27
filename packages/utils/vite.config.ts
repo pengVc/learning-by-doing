@@ -14,6 +14,7 @@ export default defineConfig({
     {
       ...dts({
         tsconfigPath: './tsconfig.json',
+        entryRoot: './',
         outDir: './dist',
         insertTypesEntry: true,
       }),

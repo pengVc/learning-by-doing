@@ -1,5 +1,6 @@
 {
   "name": "@lbd/utils",
+  "description": "可作为独立包发布的工具库",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,20 +17,13 @@
     "clean:dist": "rm -rf ./dist"
   },
   "exports": {
-    ".": {
+    "require": {
       "types": "./dist/utils.d.ts",
-      "import": "./dist/utils.js",
-      "require": "./dist/utils.umd.cjs"
+      "default": "./dist/utils.umd.cjs"
     },
-    "./lib": {
-      "types": "./dist/lib/index.d.ts",
-      "import": "./lib/index.ts",
-      "require": "./lib/index.ts"
-    },
-    "./lib/*": {
-      "types": "./dist/lib/*.d.ts",
-      "import": "./lib/*",
-      "require": "./lib/*"
+    "import": {
+      "types": "./dist/utils.d.ts",
+      "default": "./dist/utils.js"
     }
   },
   "devDependencies": {

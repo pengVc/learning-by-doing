@@ -2,7 +2,9 @@
   "extends": ["../../tsconfig.base.node.json"],
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "emitDeclarationOnly": true,
     "jsx": "react"
   },
-  "files": ["vite.config.ts", "server.ts"]
+  "files": ["vite.config.ts", "server.ts"],
+  "include": ["./src/main.server.tsx"]
 }

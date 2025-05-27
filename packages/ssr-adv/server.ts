@@ -6,7 +6,13 @@ import { fileURLToPath } from 'url'
 
 import { createServer } from 'vite'
 import sirv from 'sirv'
-import { getErrorMsg } from '@lbd/utils/lib'
+
+/**
+ * 需要提前构建 @lbd/utils
+ */
+import { getErrorMsg } from '@lbd/utils'
+
+console.log(getErrorMsg('', 'getErrorMsg 默认值'))
 
 import type { SSRender } from './src/main.server.tsx'
 import type { ViteDevServer } from 'vite'

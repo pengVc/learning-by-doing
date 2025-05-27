@@ -1,5 +1,5 @@
 import type { Compiler, WebpackPluginInstance } from 'webpack'
-import logger from '@lbd/webpack-adv/utils/logger'
+import { logger } from '@lbd/shared'
 
 // 自定义 Webpack 插件类
 class HooksLifecyclePlugin implements WebpackPluginInstance {
@@ -151,8 +151,8 @@ class HooksLifecyclePlugin implements WebpackPluginInstance {
     compiler.hooks.invalid.tap('HooksLifecyclePlugin', (error) => {
       // 在 Watch 模式下，文件变化导致编译无效时
       // 适合在 Watch 模式下处理文件变更（如通知开发者））
-      console.error('构建错误:', error);
-    });
+      console.error('构建错误:', error)
+    })
   }
 }
 
