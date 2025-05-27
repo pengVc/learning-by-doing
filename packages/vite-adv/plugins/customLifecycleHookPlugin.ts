@@ -1,4 +1,4 @@
-import logger from '@lbd/webpack-adv/utils/logger'
+import { logger } from '@lbd/shared'
 import type { Plugin } from 'vite'
 import type { InputOptions, NormalizedInputOptions, LoadResult } from 'rollup'
 

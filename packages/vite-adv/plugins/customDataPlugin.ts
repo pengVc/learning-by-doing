@@ -1,5 +1,5 @@
 import type { Plugin } from 'vite'
-import logger from '@lbd/webpack-adv/utils/logger'
+import { logger } from '@lbd/shared'
 
 const DATA = {
   name: 'data-from-build',

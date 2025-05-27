@@ -1,5 +1,6 @@
 {
   "name": "@lbd/utils",
+  "description": "可作为独立包发布的工具库",
   "private": true,
   "version": "0.0.0",
   "type": "module",
