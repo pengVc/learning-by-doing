@@ -11,6 +11,7 @@
     { "path": "./packages/demo" },
     { "path": "./packages/ssr-adv" },
     { "path": "./packages/utils" },
-    { "path": "./packages/shared" }
+    { "path": "./packages/shared" },
+    { "path": "./packages/expo-app" },
   ]
 }

@@ -28,7 +28,8 @@
     "packages/vite-adv",
     "packages/demo",
     "packages/ssr-adv",
-    "packages/shared"
+    "packages/shared",
+    "packages/expo-app"
   ],
   "devDependencies": {
     "prettier": "^3.5.3",
