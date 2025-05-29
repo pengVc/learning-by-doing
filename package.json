@@ -7,6 +7,7 @@
     "test": "npm run test --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
     "postinstall": "npm run build",
+    "clean": "npm run clean:node_modules & npm run clean:dist",
     "clean:node_modules": "find . -type d -name 'node_modules' -exec rm -rf {} +",
     "clean:dist": "npm run clean:dist --workspaces --if-present"
   },
